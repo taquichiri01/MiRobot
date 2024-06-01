@@ -59,6 +59,8 @@ public class MiRobot extends Robot {
 	}
 	
 	   public void onHitWall(HitWallEvent event) {
+
+		   // Al colisionar contra una pared
 	       out.println("Choque contra la pared en direccion " + event.getBearing() + " degrees.");
 	   }	
 }
