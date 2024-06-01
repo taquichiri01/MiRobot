@@ -3,8 +3,10 @@ package ar.edu.et7;
 import robocode.Robot;
 
 
-//TODO Renombrar este archivo y el nombre de la clase, 
-//el nombre debe incluir el apellido del alumno
+/**
+ * @author Jose Fuentes
+ * 
+ */
 
 public class MiRobot extends Robot {
 	
@@ -12,8 +14,6 @@ public class MiRobot extends Robot {
 		
 		while(true) {
 			
-			//TODO modificar este bloque de código y recargar 
-			//en Robocode presionando Restart
             ahead(100);
 
             turnGunRight(360);
