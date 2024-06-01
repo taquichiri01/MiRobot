@@ -34,6 +34,9 @@ public class MiRobot extends Robot {
 
 			//Gira hacia la izquierda 90 grados
 			turnLeft(90);
+			
+			//Gira el radar hacia la izquierda 15 grados
+			turnRadarLeft(15);
 		}
 	}
 }
