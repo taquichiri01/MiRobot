@@ -2,6 +2,7 @@ package ar.edu.et7;
 
 import robocode.Robot;
 import robocode.Rules;
+import robocode.ScannedRobotEvent;
 
 /**
  * @author Jose Fuentes
@@ -14,29 +15,41 @@ public class MiRobot extends Robot {
 
 		while (true) {
 
-			//Desplaza el robot 100 pixels hacia adelante
+			// Desplaza el robot 100 pixels hacia adelante
 			ahead(100);
 
-			//Gira el cañon hacia la derecha 90 grados
+			// Gira el cañon hacia la derecha 90 grados
 			turnGunRight(90);
 
-			//Dispara con la maxima potencia
+			// Dispara con la maxima potencia
 			fire(Rules.MAX_BULLET_POWER);
 
-			//Desplaza el robot 100 pixels hacia adelante
+			// Desplaza el robot 100 pixels hacia adelante
 			ahead(100);
-			
-			//Gira el cañon hacia la derecha 180 grados
+
+			// Gira el cañon hacia la derecha 180 grados
 			turnGunLeft(180);
 
-			//Dispara con la maxima potencia
+			// Dispara con la maxima potencia
 			fire(Rules.MAX_BULLET_POWER);
 
-			//Gira hacia la izquierda 90 grados
+			// Gira hacia la izquierda 90 grados
 			turnLeft(90);
-			
-			//Gira el radar hacia la izquierda 15 grados
+
+			// Gira el radar hacia la izquierda 15 grados
 			turnRadarLeft(15);
+		}
+	}
+
+	public void onScannedRobot(ScannedRobotEvent event) {
+
+		// Al escanear un robot
+		if (event.getDistance() < 100) {
+			// Disparar
+			fire(3);
+		} else {
+			// Disparar
+			fire(1);
 		}
 	}
 }
