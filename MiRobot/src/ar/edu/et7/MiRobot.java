@@ -4,6 +4,7 @@ import robocode.Robot;
 import robocode.Rules;
 import robocode.ScannedRobotEvent;
 import robocode.HitWallEvent;
+import robocode.BulletHitEvent;
 
 /**
  * @author Jose Fuentes
@@ -63,4 +64,10 @@ public class MiRobot extends Robot {
 		   // Al colisionar contra una pared
 	       out.println("Choque contra la pared en direccion " + event.getBearing() + " degrees.");
 	   }	
+	   
+	   public void onBulletHit(BulletHitEvent event) {
+		   
+		   // Al acertar un disparo
+	       out.println("Le acerte un disparo a " + event.getName() + "!");
+	   }	   
 }
