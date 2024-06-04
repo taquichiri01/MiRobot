@@ -30,7 +30,7 @@ public class MiRobot extends Robot {
 			ahead(100);
 
 			// Gira el cañon hacia la derecha 180 grados
-			turnGunLeft(180);
+			turnGunLeft(90);
 
 			// Dispara con la maxima potencia
 			fire(Rules.MAX_BULLET_POWER);
