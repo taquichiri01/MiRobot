@@ -11,7 +11,7 @@ import robocode.BulletHitEvent;
  * 
  */
 
-public class MiRobot extends Robot {
+public class SuRobot1 extends Robot {
 
 	public void run() {
 
