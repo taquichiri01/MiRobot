@@ -7,7 +7,7 @@ import robocode.HitWallEvent;
 import robocode.BulletHitEvent;
 
 /**
- * @author Jose Fuentes
+ * @author Alan Pinto
  * 
  */
 
@@ -21,7 +21,7 @@ public class MiRobot extends Robot {
 			ahead(100);
 
 			// Gira el cañon hacia la derecha 90 grados
-			turnGunRight(90);
+			turnGunRight(360);
 
 			// Dispara con la maxima potencia
 			fire(Rules.MAX_BULLET_POWER);
@@ -52,10 +52,10 @@ public class MiRobot extends Robot {
 		// Al escanear un robot
 		if (event.getDistance() < 100) {
 			// Disparar
-			fire(3);
+			fire(10);
 		} else {
 			// Disparar
-			fire(1);
+			fire(5);
 		}
 	}
 	
